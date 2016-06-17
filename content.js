@@ -1,8 +1,10 @@
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "clicked_browser_action" ) {
-      $(document.body).css("background","#000000");
-      console.log($(document.body));
+    	chrome.storage.local.get('bgcolor', function (result) {
+        	$(document.body).css("background",result.bgcolor);
+        	console.log(result.bgcolor);
+   		});
     }
   }
 );

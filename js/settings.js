@@ -12,12 +12,6 @@ function saveChanges() {
           // Notify that we saved.
           message('Settings saved');
         });
-
-
-    chrome.storage.local.get('bgcolor', function (result) {
-        alert(result.bgcolor);
-   });
-
 }
 
 $("#save-button").click(saveChanges);
