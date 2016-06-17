@@ -25,6 +25,7 @@
 	},
 	"options_page": "options.html",
 	"permissions":[
+	"storage",
 	"background",
 	"tabs",
 	"http://*/*",
